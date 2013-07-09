@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+	<!-- mapeamento da conexao com o banco de dados -->
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/dishup</property>
+		<property name="hibernate.connection.username">postgres</property>
+		<property name="hibernate.connection.password">bi2404</property>
+		<property name="hibernate.connection.pool_size">10</property>
+		<property name="show_sql">false</property>
+		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<property name="hibernate.current_session_context_class">thread</property>
+		<property name="hibernate.format_sql">true</property>
+		<property name="hibernate.connection.autocommit">false</property>
+	<!-- mapeamento das entidades do sistema -->
+		<mapping class="br.com.dishup.core.entity.EmploymentEntity"/>
+		<mapping class="br.com.dishup.core.entity.CityEntity"/>
+		<mapping class="br.com.dishup.core.entity.StateEntity"/>
+		<mapping class="br.com.dishup.core.entity.CountryEntity"/>
+		<mapping class="br.com.dishup.core.entity.RestaurantProposalEntity"/>
+		<mapping class="br.com.dishup.core.entity.RestaurantBasicInfoEntity"/>
+		<mapping class="br.com.dishup.core.entity.RestaurantAddressEntity"/>
+		<mapping class="br.com.dishup.core.entity.RestaurantEntity"/>
+		<mapping class="br.com.dishup.core.entity.RestaurantUserGroupEntity"/>
+		<mapping class="br.com.dishup.core.entity.RestaurantScheduleEntity"/>
+		<mapping class="br.com.dishup.core.entity.RestaurantImageEntity"/>
+		<mapping class="br.com.dishup.core.entity.RestaurantResponsibleEntity"/>
+		<mapping class="br.com.dishup.core.entity.ProposalStatusEntity"/>
+		<mapping class="br.com.dishup.core.entity.RestaurantStatusEntity"/>
+		<mapping class="br.com.dishup.core.entity.UserStatusEntity"/>
+		<mapping class="br.com.dishup.core.entity.CulinaryTypeEntity"/>
+		<mapping class="br.com.dishup.core.entity.WeekdayTypeEntity"/>
+		<mapping class="br.com.dishup.core.entity.UserTypeEntity"/>
+		<mapping class="br.com.dishup.core.entity.UserAdministratorEntity"/>
+		<mapping class="br.com.dishup.core.entity.UserConsumerEntity"/>
+		<mapping class="br.com.dishup.core.entity.UserRestaurantEntity"/>
+	</session-factory>
+</hibernate-configuration>
